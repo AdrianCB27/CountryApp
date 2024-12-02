@@ -1,0 +1,21 @@
+<h2>Por región</h2>
+<hr />
+<div class="row">
+  <div class="col">
+    <h3>Busca por región</h3>
+    <button
+      class="btn mx-2"
+      *ngFor="let region of regions"
+      (click)="recibirValor(region)"
+      [ngClass]="{'btn-outline-primary': region===selectedRegion}"
+    >
+      {{ region }}
+    </button>
+    <!-- <shared-search-box (emitir)="recibirValor($event)"></shared-search-box> -->
+  </div>
+</div>
+<div class="container">
+  <div class="col">
+    <countries-country-table [countries]="paises"></countries-country-table>
+  </div>
+</div>

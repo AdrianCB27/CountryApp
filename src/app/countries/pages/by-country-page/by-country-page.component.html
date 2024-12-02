@@ -1,0 +1,14 @@
+<h2>Por País</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <h3>Busca por pais</h3>
+      <shared-search-box (emitir)="recibirValor($event)"></shared-search-box>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col">
+      <countries-country-table [countries]="paises"></countries-country-table>
+    </div>
+  </div>
+  
